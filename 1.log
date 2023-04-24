@@ -1,0 +1,23 @@
+
+> sveltekit-pokemon@0.0.1 dev /Users/antonfredriksson/GitHub/sveltekit-pokemon
+> vite dev
+
+
+
+  VITE v4.3.1  ready in 568 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h to show help
+ ELIFECYCLE  Command failed with exit code 1.
+
+> sveltekit-pokemon@0.0.1 dev /Users/antonfredriksson/GitHub/sveltekit-pokemon
+> vite dev
+
+
+  VITE v4.3.1  ready in 439 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h to show help
+ ELIFECYCLE  Command failed with exit code 1.

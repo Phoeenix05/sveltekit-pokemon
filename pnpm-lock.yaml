@@ -4,6 +4,8 @@ specifiers:
   '@playwright/test': ^1.28.1
   '@sveltejs/adapter-auto': ^2.0.0
   '@sveltejs/kit': ^1.5.0
+  '@svelteuidev/composables': ^0.11.1
+  '@svelteuidev/core': ^0.11.1
   '@typescript-eslint/eslint-plugin': ^5.45.0
   '@typescript-eslint/parser': ^5.45.0
   autoprefixer: ^10.4.14
@@ -24,6 +26,8 @@ devDependencies:
   '@playwright/test': 1.32.3
   '@sveltejs/adapter-auto': 2.0.0_@sveltejs+kit@1.15.7
   '@sveltejs/kit': 1.15.7_svelte@3.58.0+vite@4.3.1
+  '@svelteuidev/composables': 0.11.1
+  '@svelteuidev/core': 0.11.1_37jsqdnf2svoc6irho24bh7xqi
   '@typescript-eslint/eslint-plugin': 5.59.0_chh3ljgpke5ydgcjpmkmu4hz5q
   '@typescript-eslint/parser': 5.59.0_iacogk7kkaymxepzhgcbytyi7q
   autoprefixer: 10.4.14_postcss@8.4.23
@@ -277,6 +281,16 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
+  /@floating-ui/core/0.7.3:
+    resolution: {integrity: sha512-buc8BXHmG9l82+OQXOFU3Kr2XQx9ys01U/Q9HMIrZ300iLc8HLMgh7dcCqgYzAzf4BkoQvDcXf5Y+CuEZ5JBYg==}
+    dev: true
+
+  /@floating-ui/dom/0.5.2:
+    resolution: {integrity: sha512-z1DnEa7F3d8Fm/eXSbii8UEGpcjZGkQaYYUI0WpEVgD3vBfebDW8j/3ysusxonuMexoigA+A3b/fYH7sEqiwyg==}
+    dependencies:
+      '@floating-ui/core': 0.7.3
+    dev: true
+
   /@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}
     engines: {node: '>=10.10.0'}
@@ -367,6 +381,10 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
+  /@stitches/core/1.2.8:
+    resolution: {integrity: sha512-Gfkvwk9o9kE9r9XNBmJRfV8zONvXThnm1tcuojL04Uy5uRyqg93DC83lDebl0rocZCfKSjUv+fWYtMQmEDJldg==}
+    dev: true
+
   /@sveltejs/adapter-auto/2.0.0_@sveltejs+kit@1.15.7:
     resolution: {integrity: sha512-b+gkHFZgD771kgV3aO4avHFd7y1zhmMYy9i6xOK7m/rwmwaRO8gnF5zBc0Rgca80B2PMU1bKNxyBTHA14OzUAQ==}
     peerDependencies:
@@ -421,6 +439,22 @@ packages:
       vitefu: 0.2.4_vite@4.3.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@svelteuidev/composables/0.11.1:
+    resolution: {integrity: sha512-TTRGTDlrJD22KT/X8L2he5hu3rDorzzB591sgzDjtCi35vKF6Z/ijuc/ngNCFHA+2WxcDGBGPs7YewEgv2yEKg==}
+    dev: true
+
+  /@svelteuidev/core/0.11.1_37jsqdnf2svoc6irho24bh7xqi:
+    resolution: {integrity: sha512-Dy16B6OaoSgMPyWL+WvrJwFB529N6Gmr4S4qdUWmE3LrJwhm9rNtwoEQn167dhOlmTQhfgJDot+DuIRRwtGXrw==}
+    peerDependencies:
+      '@svelteuidev/composables': 0.11.1
+      svelte: '>=3.55.0'
+    dependencies:
+      '@floating-ui/dom': 0.5.2
+      '@stitches/core': 1.2.8
+      '@svelteuidev/composables': 0.11.1
+      svelte: 3.58.0
     dev: true
 
   /@types/cookie/0.5.1:

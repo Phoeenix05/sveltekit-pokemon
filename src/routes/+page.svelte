@@ -1,10 +1,17 @@
 <script lang="ts">
+	import { goto } from "$app/navigation"
 
-    let name = 'Pikachu';
+    import { Input, Button } from "@svelteuidev/core"
+
+    let name = '';
 
 </script>
 
-<div class="flex m-auto justify-center items-center">
-    <input type="text" bind:value={name}>
-    <a href={"/pokemon/" + name.toLowerCase()}>Search</a>
+<div class="flex items-center justify-center h-full">
+    <!-- <input type="text" bind:value={name}> -->
+    <Input placeholder="Name or ID" bind:value={name} />
+    <!-- <a href={"/pokemon/" + name.toLowerCase()}>Search</a> -->
+    <Button on:click={() => goto("/pokemon/" + name.toLowerCase())} class="ml-2">
+        Search
+    </Button>
 </div>
