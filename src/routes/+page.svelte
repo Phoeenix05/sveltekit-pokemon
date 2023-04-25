@@ -3,27 +3,30 @@
 	import PokemonCard from '../components/PokemonCard.svelte';
 
     import { goto } from '$app/navigation';
-	import { Button, Input } from '@svelteuidev/core';
+	import { Button, TextInput } from '@svelteuidev/core';
 
 	let name = '';
 
-	const open = (name: string) => {
-		// Add name validation. [a-zA-Z] or [0-9] all names and numbers (IDs) should be accepted
-		goto('/pokemon/' + name.toLowerCase());
-	};
+	// Add name validation. [a-zA-Z] or [0-9] all names and numbers (IDs) should be accepted
+	const open = () => goto('/pokemon/' + name.toLowerCase())
 
 	import type { PageData } from "./$types";
     export let data: PageData
+	const { results } = data.data
 
 </script>
 
-<div class="flex items-center justify-center h-full">
-	<Input placeholder="Name or ID" bind:value={name} on:change={() => open(name)} />
-	<Button on:click={() => open(name)} class="ml-2">Search</Button>
+<div class="flex items-center justify-center h-32">
+	<TextInput placeholder="Name or ID" bind:value={name} on:change={open} />
+	<Button on:click={open} class="ml-2">Search</Button>
 </div>
+<!-- <form action={() => open("pikachu")} method="get" class="flex items-center justify-center h-32 gap-2">
+	<TextInput type="text" placeholder="Name or ID" bind:value={name}/>
+	<Button>Search</Button>
+</form> -->
 
 <div class="flex flex-row flex-wrap justify-center">
-	{#each data.data.results as pokemon}
-		<PokemonCard name={pokemon.name} id={pokemon.url.split("/")[6]} />
+	{#each results as { name, url }}
+		<PokemonCard {name} id={url.split("/")[6]} />
 	{/each}
 </div>

@@ -6,6 +6,6 @@
 
 </script>
 
-<a data-sveltekit-preload-data href={"/pokemon/" + name} class="hover:cursor-pointer">
-    <img src={sprite_url} alt={"sprite_" + name}>
+<a data-sveltekit-preload-data href="/pokemon/{name}" class="hover:cursor-pointer">
+    <img src={sprite_url} alt="sprite_{name}">
 </a>
