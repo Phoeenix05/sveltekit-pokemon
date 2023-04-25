@@ -18,9 +18,7 @@
 </script>
 
 <div class="flex items-center justify-center h-full">
-	<!-- <input type="text" bind:value={name}> -->
-	<Input placeholder="Name or ID" bind:value={name} />
-	<!-- <a href={"/pokemon/" + name.toLowerCase()}>Search</a> -->
+	<Input placeholder="Name or ID" bind:value={name} on:change={() => open(name)} />
 	<Button on:click={() => open(name)} class="ml-2">Search</Button>
 </div>
 
